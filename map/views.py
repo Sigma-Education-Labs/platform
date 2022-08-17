@@ -6,7 +6,7 @@ from django.template import loader
 from lessons_widget.models import Lesson
 
 def index(request):
-    latest_lessons_list = Lesson.objects.order_by('-title')[:5]
+    latest_lessons_list = Lesson.objects.order_by('title')[:15]
     template = loader.get_template('map/index.html')
     context = {
         'latest_lessons_list': latest_lessons_list,
