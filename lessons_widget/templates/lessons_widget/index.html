@@ -1,0 +1,20 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'lessons_widget/style.css' %}">
+<script src="{% static 'lessons_widget/scripts.js' %}"></script>
+
+<div class="sigma-lessons-list">
+    {% if latest_lessons_list %}
+        {% for lesson in latest_lessons_list %}
+            <div class="sigma-lesson">
+                <div class="sigma-lesson-title">
+                    {{ lesson.title }}
+                </div>
+                <div class="sigma-lesson-content">
+                    {{ lesson.lesson_text }}
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No lessons are available.</p>
+    {% endif %}
+</div>
