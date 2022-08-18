@@ -1,0 +1,21 @@
+.sigma-lessons-list {
+    width: 25em;
+    float: right;
+    background-color: #D9D9D9;
+    height: 100%;
+}
+
+.sigma-lesson {
+    margin: 1em;
+}
+
+.sigma-lesson-title {
+    background-color: #BEB0B0;
+    padding: 1em;
+    margin: 1em;
+}
+
+.sigma-lesson-content {
+    display: none;
+    padding: 2em;
+}
