@@ -1,0 +1,30 @@
+[1mdiff --cc map/views.py[m
+[1mindex faf2747,ee50f62..0000000[m
+[1m--- a/map/views.py[m
+[1m+++ b/map/views.py[m
+[36m@@@ -3,13 -2,13 +3,23 @@@[m [mfrom django.shortcuts import rende[m
+  [m
+  # Create your views here.[m
+  from django.http import HttpResponse[m
+[31m- [m
+[32m+ from django.template import loader[m
+[32m+ from lessons_widget.models import Lesson[m
+  [m
+  def index(request):[m
+[32m++<<<<<<< HEAD[m
+[32m +    return HttpResponse("Welcome to the Map index page. Currently in development.")[m
+[32m +[m
+[32m +def map_view(request):[m
+[32m +      [m
+[32m +    # render function takes argument  - request[m
+[32m +    # and return HTML as response[m
+[31m-     return render(request, "./templates/map/map.html")[m
+[32m++    return render(request, "./templates/map/map.html")[m
+[32m++=======[m
+[32m+     latest_lessons_list = Lesson.objects.order_by('title')[:15][m
+[32m+     template = loader.get_template('map/index.html')[m
+[32m+     context = {[m
+[32m+         'latest_lessons_list': latest_lessons_list,[m
+[32m+     }[m
+[32m+     return HttpResponse(template.render(context, request))[m
+[32m++>>>>>>> 74f83de24bcf4f9e21ef4ac583016677a91ec724[m

@@ -1,0 +1,72 @@
+    1  git sssh
+    2  ssh
+    3  help ssh
+    4  ssh
+    5  [200~ssh -L [LOCAL_IP:]LOCAL_PORT:DESTINATION:DESTINATION_PORT [USER@]SSH_SERVER~
+    6  ssh -L [LOCAL_IP:]LOCAL_PORT:DESTINATION:8080 stoyan@10.67.49.172
+    7  ssh -R 8080:localDESTINATION:8080 stoyan@10.67.49.172
+    8  ssh -R 8080:localhost:8080 stoyan@10.67.49.172
+    9  ssh -L 8080:localhost:8080 stoyan@10.67.49.172
+   10  ssh -L 8080:localhost:8080 stoyan@10.67.49.172
+   11  ssh-keygen -b 4096 -t rsa -N '' -f  ~/.ssh/id_rsa
+   12  ssh-keygen -b 4096 -t rsa -N '' -f  ~/.ssh/id_rsa
+   13  ssh-copy-id -p 7870 stoyan@telin08.ugent.be
+   14  ssh-copy-id -p 7870 stoyan@telin08.ugent.be
+   15  ssh-copy-id -p 7870 stoyan@telin08.ugent.be
+   16  ssh -p 7870 stoyan@telin08.ugent.be
+   17  hey
+   18  ssh -f -N -o TCPKeepAlive=yes -o ServerAliveInterval=50 -p 7870 -L
+   19  8080:localhost:8080 stoyan@telin08.ugent.be
+   20  ssh -p 7870 -f -N -o TCPKeepAlive=yes -o ServerAliveInterval=50 -L
+   21  8080:localhost:8080 stoyan@telin08.ugent.be
+   22  ssh -f -N -o TCPKeepAlive=yes -o ServerAliveInterval=50 -p 7870 -L 8080:localhost:8080 stoyan@telin08.ugent.be
+   23  refresh
+   24  help
+   25  ssh -f -N -o TCPKeepAlive=yes -o ServerAliveInterval=50 -p 7870 -L 8080:localhost:8080 stoyan@telin08.ugent.be
+   26  ssh -f -N -o TCPKeepAlive=yes -o ServerAliveInterval=50 -p 7870 -L 8080:localhost:8080 stoyan@telin08.ugent.be
+   27  ssh -f -N -o TCPKeepAlive=yes -o ServerAliveInterval=50 -p 7870 -L 8080:localhost:8080 stoyan@telin08.ugent.be
+   28  ssh -f -N -o TCPKeepAlive=yes -o ServerAliveInterval=50 -p 7870 -L 8080:localhost:8080 stoyan@telin08.ugent.be
+   29  ssh -f -N -o TCPKeepAlive=yes -o ServerAliveInterval=50 -p 7870 -L 8080:localhost:8080 stoyan@telin08.ugent.be
+   30  ssh -f -N -o TCPKeepAlive=yes -o ServerAliveInterval=50 -p 7870 -L 8080:localhost:8080 stoyan@telin08.ugent.be
+   31  ssh -f -N -o TCPKeepAlive=yes -o ServerAliveInterval=50 -p 7870 -L 8080:localhost:8080 stoyan@telin08.ugent.be
+   32  exit
+   33  ssh -f -N -o TCPKeepAlive=yes -o ServerAliveInterval=50 -p 7870 -L 8080:localhost:8080 stoyan@telin08.ugent.be
+   34  ssh -p 7870 stoyan@telin08.ugent.be
+   35  ssh-keygen -b 4096 -t rsa -N '' -f  ~/.ssh/id_rsa
+   36  ssh-copy-id -p 7870 stoyan@telin08.ugent.be
+   37  ssh -p 7870 stoyan@telin08.ugent.be
+   38  ssh-keygen -b 4096 -t rsa -N '' -f  ~/.ssh/id_rsa
+   39  ssh-copy-id -p 7870 stoyan@telin08.ugent.be
+   40  ssh -f -N -o TCPKeepAlive=yes -o ServerAliveInterval=50 -p 7870 -L 8080:localhost:8080 stoyan@telin08.ugent.be
+   41  ssh-copy-id -p 7870 smadjaroff@telin08.ugent.be
+   42  ssh-keygen -b 4096 -t rsa -N '' -f  ~/.ssh/id_rsa
+   43  ssh-copy-id -p 7870 smadjaroff@telin08.ugent.be
+   44  ssh-keygen -b 4096 -t rsa -N '' -f  ~/.ssh/id_rsa
+   45  ssh-copy-id -p 7870 stoyan@telin08.ugent.be
+   46  ssh -f -N -o TCPKeepAlive=yes -o ServerAliveInterval=50 -p 7870 -L 8080:localhost:8080 stoyan@telin08.ugent.be
+   47  ssh-copy-id -p 7870 stoyan@telin08.ugent.be
+   48  ssh -f -N -o TCPKeepAlive=yes -o ServerAliveInterval=50 -p 7870 -L 8080:localhost:8080 stoyan@telin08.ugent.be
+   49  ssh-keygen -b 4096 -t rsa -N '' -f  ~/.ssh/id_rsa
+   50  ssh-copy-id -p 7870 stoyan@telin08.ugent.be
+   51  ssh-copy-id -p 7870 stoyan@telin08.ugent.be
+   52  ssh -f -N -o TCPKeepAlive=yes -o ServerAliveInterval=50 -p 7870 -L 8080:localhost:8080 stoyan@telin08.ugent.be
+   53  exit
+   54  ssh-copy-id -p 7870 stoyan@telin08.ugent.be
+   55  ssh-copy-id -p 7870 stoyan@telin08.ugent.be
+   56  ssh -f -N -o TCPKeepAlive=yes -o ServerAliveInterval=50 -p 7870 -L 8080:localhost:8080 stoyan@telin08.ugent.be
+   57  exit
+   58  cd ..
+   59  rm -r teamproject/
+   60  git clone https://github.com/Sigma-Education-Labs/platform.git
+   61  git clone git@github.com:Sigma-Education-Labs/platform.git
+   62  ls
+   63  cd platform/
+   64  ls
+   65  pip --version
+   66  conda activate platform
+   67  clear
+   68  git pull origin main 
+   69  [200~git config --global --add safe.directory D:/SpaceChallenges/platform
+   70  git config --global --add safe.directory D:/SpaceChallenges/platform
+   71  git pull origin main 
+   72  history 1000 > gitbashhist.txt
