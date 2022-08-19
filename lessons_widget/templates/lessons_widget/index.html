@@ -1,6 +1,9 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'lessons_widget/style.css' %}">
 <script src="{% static 'lessons_widget/scripts.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.9.6/ace.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.9.6/theme-monokai.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.9.6/mode-javascript.min.js" type="text/javascript" charset="utf-8"></script>
 
 <div class="sigma-lessons-list">
     {% if latest_lessons_list %}
@@ -17,4 +20,11 @@
     {% else %}
         <p>No lessons are available.</p>
     {% endif %}
+    <div id="editor"></div>
 </div>
+
+<script>
+    var editor = ace.edit("editor");
+    {% comment %} editor.setTheme("ace/theme/monokai"); {% endcomment %}
+    editor.session.setMode("ace/mode/javascript");
+</script>
