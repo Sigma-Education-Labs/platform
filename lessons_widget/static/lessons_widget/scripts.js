@@ -1,4 +1,4 @@
-const lessonsNavigation = (event) => {
+const initLessonsWidget = (event) => {
     const lessons = document.querySelectorAll('.sigma-lesson');
     lessons.forEach((lesson) => {
         const title = lesson.children[0];
@@ -9,6 +9,12 @@ const lessonsNavigation = (event) => {
             content.style.display = 'inline';
         });
     });
+
+    const submitButton = document.querySelector('.sigma-code-submit-button');
+    submitButton.addEventListener('click', (event) => {
+        event.preventDefault();
+    });
 }
 
-window.addEventListener('DOMContentLoaded', lessonsNavigation);
+window.addEventListener('DOMContentLoaded', initLessonsWidget);
+

@@ -26,3 +26,9 @@
     height: 23em;
     margin-top: 20em;
 }
+
+.sigma-code-submit-button {
+    float: right;
+    padding: 0.5em;
+    margin: 0.5em;
+}
