@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'lessons_widget.apps.LessonsWidgetConfig',
     'map.apps.MapConfig',
+    'django_ace',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

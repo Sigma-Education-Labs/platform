@@ -20,13 +20,7 @@
     {% else %}
         <p>No lessons are available.</p>
     {% endif %}
-    <div id="editor">
-    </div>
-    <button type="submit" form="editor-form" value="Submit" class="sigma-code-submit-button">Submit</button> 
-</div>
 
-<script>
-    var editor = ace.edit("editor");
-    {% comment %} editor.setTheme("ace/theme/monokai"); {% endcomment %}
-    editor.session.setMode("ace/mode/javascript");
-</script>
+    <div id="editor">console.log('I should appear in the browser console');</div>
+    <button type="submit" form="editor-form" value="Submit" class="sigma-code-submit-button">Run code</button>
+</div>

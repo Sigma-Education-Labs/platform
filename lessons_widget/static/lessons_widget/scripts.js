@@ -1,4 +1,8 @@
 const initLessonsWidget = (event) => {
+    var editor = ace.edit("editor");
+    editor.session.setMode("ace/mode/javascript");
+    editor.setOption("wrap", 35);
+
     const lessons = document.querySelectorAll('.sigma-lesson');
     lessons.forEach((lesson) => {
         const title = lesson.children[0];
@@ -13,6 +17,11 @@ const initLessonsWidget = (event) => {
     const submitButton = document.querySelector('.sigma-code-submit-button');
     submitButton.addEventListener('click', (event) => {
         event.preventDefault();
+
+        if (typeof editor != 'undefined') {
+            const codeSnippet = new Function(editor.getValue());
+            codeSnippet();
+        }
     });
 }
 
