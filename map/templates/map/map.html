@@ -7,7 +7,8 @@
 {% comment %} {{ form.media }} {% endcomment %}
 
 <div id="map">
-  {% include "lessons_widget/index.html" %}
+  <!-- {% include "lessons_widget/index.html" %} -->
+  <style>.embed-container {position: relative; padding-bottom: 80%; height: 0; max-width: 100%;} .embed-container iframe, .embed-container object, .embed-container iframe{position: absolute; top: 0; left: 0; width: 75%; height: 100%;} small{position: absolute; z-index: 40; bottom: 0; margin-bottom: -15px;}</style><div class="embed-container"><iframe width="500" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="map-2" src="https://arcgis.com/apps/webappviewer/index.html?id=0dc7dc9904bb4696b31308b445f0fa94"></iframe></div>
 </div>
-<script src="{% static 'map.js' %}"></script>
+
 
