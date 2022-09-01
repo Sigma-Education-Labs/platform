@@ -1,30 +1,39 @@
-from doctest import script_from_examples
-from django.shortcuts import render
-from django.http import HttpResponse, HttpResponseRedirect
-from django.shortcuts import render, redirect
+from django.http import HttpResponse
 from django.template import loader
-from lessons_widget.models import Lesson # , Snippet
-# from lessons_widget.forms import SnippetForm
 
-# class MapView(TemplateView):
-#     template_name: "map.html"
+def get_item(bucket_name, item_name):
+    print("Retrieving item from bucket: {0}, key: {1}".format(bucket_name, item_name))
+    try:
+        file = cos.Object(bucket_name, item_name).get()
+        print("File Contents: {0}".format(file["Body"].read()))
+        return file["Body"].read()
+    except ClientError as be:
+        print("CLIENT ERROR: {0}\n".format(be))
+    except Exception as e:
+        print("Unable to retrieve file contents: {0}".format(e))
+
 
 def index(request):
-    # return HttpResponse("Welcome to the Map index page. Currently in development.")
-    latest_lessons_list = Lesson.objects.order_by('title')[:15]
-    template = loader.get_template('map/map.html')
+    fire_coords = []
+    s3_bucket_name = ""
+    coords_file_name = "map/coords-01-09-2022.txt"
+
+    # Uncomment when we have access to an IBM COS S3
+    # coords_file = get_item(s3_bucket_name, coords_file_name)
     
-    # if request.method == 'POST':
-    #     form = SnippetForm(request.POST)
-    #     if form.is_valid():
-    #         form.save()
-    #         return redirect('/')
-    # else:
-    #     form = SnippetForm()
+    with open(coords_file_name) as f:
+        contents = f.readlines()
+        for i in contents:
+            coords_pair = i.split()
+            # First part of the pair is lat and if it's bellow 30 - it might be a desert
+            # in which case we don't want it (for now)
+            if float(coords_pair[0]) > 30.0:
+                fire_coords.append(coords_pair)
+
+    template = loader.get_template('map/map.html')
+
 
     context = {
-        'latest_lessons_list': latest_lessons_list,
-        # "form": form,
-        # "snippets": Snippet.objects.all()
+        'fire_coords': fire_coords,
     }
     return HttpResponse(template.render(context, request))

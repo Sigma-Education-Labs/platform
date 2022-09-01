@@ -1,14 +1,18 @@
+
 {% load static %}
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="{% static 'map.css' %}">
 <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-{% comment %} {{ form.media }} {% endcomment %}
 
-<div id="map">
-  {% include "lessons_widget/index.html" %}
-  <style>.embed-container {position: relative; height: 100%; max-width: 100%;} .embed-container iframe, .embed-container object, .embed-container iframe{position: absolute; top: 0; left: 0; width: 75%; height: 100%;} small{position: absolute; z-index: 40; bottom: 0; margin-bottom: -15px;}</style><div class="embed-container"><iframe width="500" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="map-2" src="https://arcgis.com/apps/webappviewer/index.html?id=0dc7dc9904bb4696b31308b445f0fa94"></iframe></div>
-</div>
+<div id="map"></div>
+<script src="{% static 'map.js' %}"></script>
 
-
+{% if fire_coords %}
+    {{ fire_coords | json_script:"fire_coords" }};
+    <script>
+        const detectedFireCoords = JSON.parse(document.getElementById('fire_coords').textContent);
+        detectedFireCoords.forEach(element => L.marker(element).addTo(map));
+    </script>
+{% endif %}
