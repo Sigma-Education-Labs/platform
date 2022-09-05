@@ -1,5 +1,7 @@
 from django.http import HttpResponse
 from django.template import loader
+import ibm_boto3
+from ibm_botocore.client import Config, ClientError
 
 def get_item(bucket_name, item_name):
     print("Retrieving item from bucket: {0}, key: {1}".format(bucket_name, item_name))
