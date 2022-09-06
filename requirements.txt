@@ -1,6 +1,5 @@
 anyio==3.6.1
 asgiref==3.5.2
-certifi @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_884c889c-96af-444f-bd6d-daddb5e9a462ykj3l5n_/croots/recipe/certifi_1655968814730/work/certifi
 charset-normalizer==2.1.0
 click==8.1.3
 distlib==0.3.4
@@ -15,7 +14,6 @@ ibm-cos-sdk-core==2.12.0
 ibm-cos-sdk-s3transfer==2.12.0
 idna==3.3
 jmespath==0.10.0
-numpy @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_5f5504oaep/croots/recipe/numpy_and_numpy_base_1659432718638/work
 platformdirs==2.5.2
 pydantic==1.9.1
 pyserial==3.5
