@@ -1,6 +1,6 @@
 # Blazemaps web platform 
 
-This is a web platform that aims to visualize the active fires detected by the in code in [this repository](https://github.com/Sigma-Education-Labs/camera).
+This is a web platform that aims to visualize the active fires detected by the code in [this repository](https://github.com/Sigma-Education-Labs/camera).
 
 ## How to install  
 1. Clone this repository
