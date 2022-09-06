@@ -6,7 +6,6 @@ distlib==0.3.4
 Django==4.1
 fastapi==0.78.0
 filelock==3.7.1
-GDAL==3.4.1
 h11==0.13.0
 httptools==0.4.0
 ibm-cos-sdk==2.12.0
