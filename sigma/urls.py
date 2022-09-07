@@ -21,5 +21,6 @@ urlpatterns = [
     path('', views.home),
     path('firemap/', views.firemap),
     path('team/', views.team),
+    path('fire-coords', views.fire_coords),
     path('admin/', admin.site.urls),
 ]
