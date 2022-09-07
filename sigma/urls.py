@@ -15,8 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from map import views
 
 urlpatterns = [
-    path('', include('map.urls')),
+    path('', views.home),
+    path('firemap/', views.firemap),
+    path('team/', views.team),
     path('admin/', admin.site.urls),
 ]

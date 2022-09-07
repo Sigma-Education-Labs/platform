@@ -21,8 +21,8 @@ def test_get_fire_coords_from_pi():
     os.system('rm /Users/mount40/Projects/sigma/sigma/map/resources/fires.txt')
     os.system('sshpass -p "toor" scp root@10.0.0.1:/work/fires.txt /Users/mount40/Projects/sigma/sigma/map/resources')
 
-def index(request):
-    test_get_fire_coords_from_pi()
+def firemap(request):
+    # test_get_fire_coords_from_pi()
     fire_coords = []
     s3_bucket_name = ""
     coords_file_name = "map/resources/fires.txt"
@@ -41,8 +41,17 @@ def index(request):
 
     template = loader.get_template('map/map.html')
 
-
     context = {
         'fire_coords': fire_coords,
     }
+    return HttpResponse(template.render(context, request))
+
+def home(request):
+    template = loader.get_template('map/home.html')
+    context = {}
+    return HttpResponse(template.render(context, request))
+
+def team(request):
+    template = loader.get_template('map/team.html')
+    context = {}
     return HttpResponse(template.render(context, request))
